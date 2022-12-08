@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    padding-top: 10px;
+    width: 1300px;
+    margin: 0 auto;
+
+}
+.header .topbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+.header .topbar .col {
+    display: flex;
+}
+.header .topbar .col .col_1{
+    display: flex;
+}
+
+.header .topbar .col .col_1 button{
+    border: none;
+    background-color: white;
+    margin-right:20px;
+    cursor: pointer;
+}
+.header .topbar .col .col_1 svg{
+    width: 10px;
+    
+}
+.header-main {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.header-main .col_1{
+    display: flex;
+}
+.header-main .col_1 .logo{
+    padding: 0 10px;
+}
+.header-main .col_1 img{
+   width: 150px;
+}
+.header-main .menu ul{
+    list-style: none;
+}
+.header-main .menu ul li{
+   display: inline-block;
+   padding: 0 10px;
+}
+.header-main .menu ul li a{
+  text-decoration: none;
+  font-size: 23px;
+  font-weight: bold;
+  color: black;
+}
+
+.content .bread-crumb{
+    padding: 20px 0;
+    font-weight: bold;
+}
+
+.content .bread-crumb .banner{
+    width: 2000px ;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.content .bread-crumb .banner img{
+    width: 100%;
+}
+
+.content .bread-crumb .container{
+    display: flex;
+}
+
+.content .bread-crumb .container {
+    display: flex;
+}
+
+.container .row {
+    display: flex;
+}
+.container .row .sidebar{
+   width: 20%;
+   padding-right: 20px;
+}
+
+.container .row .sidebar .danhmuc{
+   border: 1px solid  rgb(182, 185, 187);
+   padding-left: 10px;
+}
+
+.container .row .sidebar .danhmuc ul{
+    list-style: none;
+
+}
+.container .row .sidebar .danhmuc ul li{
+    margin:15px 0;
+}
+.container .row .sidebar .danhmuc ul a{
+    text-decoration: none;
+    color: black;
+}
+.container .row .sidebar .kichthuoc{
+    padding: 20px 0;
+}
+.container .row .sidebar .kichthuoc .size{
+    padding-top: 10px;
+}
+.container .row .sidebar .kichthuoc .size button{
+    border-radius:0 ;
+    border:rgb(212, 212, 212) 1px solid;
+    background-color: white;
+    padding: 4px;
+}
+
+.container .row .sidebar .mausac{
+    padding: 20px 0;
+}
+
+.container .row .sidebar .mausac .loai{
+    padding-top: 10px;
+    display:flex;
+}
+.container .row .sidebar .mausac .loai .loai1{
+    width: 20px;
+    height: 20px;
+    background: red;
+    margin-right: 10px;
+}
+.container .row .sidebar .mausac .loai .loai2{
+    width: 20px;
+    height: 20px;
+    background: rgb(9, 255, 0);
+    margin-right: 10px;
+}
+.container .row .sidebar .mausac .loai .loai3{
+    width: 20px;
+    height: 20px;
+    background: rgb(0, 162, 255);
+    margin-right: 10px;
+}
+.container .row .sidebar .mausac .loai .loai4{
+    width: 20px;
+    height: 20px;
+    background: rgb(174, 255, 0);
+    margin-right: 10px;
+}
+.container .row .sidebar .mausac .loai .loai5{
+    width: 20px;
+    height: 20px;
+    background: rgb(234, 255, 0);
+    margin-right: 10px;
+}
+.container .row .sidebar .mucgia{
+    padding: 20px 0;
+}
+.container .row .sidebar .theoloai{
+    padding: 20px 0;
+}
+.container .row .sidebar .theoloai .loai{
+    padding-top: 10px;
+    padding-left: 20px;
+
+}
+.container .row .sidebar .theoloai .loai ul{
+   list-style: square;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+
+}
+.container .row .sidebar .theoloai .loai ul a{
+    color: black;
+    text-decoration: none;
+
+}
+.container .row .products{
+    width: 80%;
+
+}
+.container .row .products .row1{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;
+}
+.container .row .products .row1 .sx{
+    display: flex;
+}
+.container .row .products .row2{
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;   
+    text-align: center;
+}
+.container .row .products .row2 img{
+   height: 500px; 
+}
+.container .row .products .row2 a{
+   text-decoration: none;
+   color: black;
+}
+.container .row .products .row2 a:hover{
+   border: 1px solid rgb(142, 142, 142);
+}
+.container .row .products .row2 h3{
+
+   color: rgb(255, 0, 0);
+}
