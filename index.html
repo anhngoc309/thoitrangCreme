@@ -39,8 +39,7 @@
                             <a href="" class="home-page">TRANG CHỦ</a>
                         </div>
                         <div class="product-item">
-                            <a href="./shoping/index.html" class="product">SẢN PHẨM
-                            </a>
+                            <a href="./shoping/index.html" class="product">SẢN PHẨM</a>
                             <ul class="product-child">
                                 <li><a href="./shoping/index.html">BỘ QUẦN ÁO</a></li>
                                 <li><a href="./shoping/index.html">QUẦN</a></li>
@@ -84,8 +83,8 @@
                             <img src="https://img6.thuthuatphanmem.vn/uploads/2022/03/04/background-quang-cao-thoi-trang-dep_025656293.jpg" alt="">
                         </div>
                     </div>
-                    <button class="slider-prev">prev</button>
-                    <button class="slider-next">next</button>
+                    <button class="slider-prev"> < </button>
+                    <button class="slider-next"> > </button>
                 </div>
                 <div class="body-header-item">
                     <div class="cong-so">
@@ -129,13 +128,13 @@
                     <img src="https://bizweb.dktcdn.net/100/286/031/themes/790648/assets/banner.jpg?1621504087264" alt="">
                 </div>
 
+
                 <div class="san-pham-moi">
                     <h2><a href="" style="text-decoration: none; color: black">SẢN PHẨM MỚI</a></h2>
                     <i>Sản phẩm nổi bật hôm nay</i>
                     <div class="image">
                         <div class="image-item">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/286/031/products/qd0029-vd0005-1-2b1bcdb4-e813-48f6-a074-458cf2c43f65.jpg?v=1601951753000" alt="">
-                            <p><a href="" class="xem-nhanh">Xem nhanh</a></p>
                             <a href="">Áo vest VD0005</a>
                             <p>860.000đ</p>
                             <div class="color-circle">
@@ -145,7 +144,6 @@
                         </div>
                         <div class="image-item">
                             <img src="https://bizweb.dktcdn.net/thumb/large/100/286/031/products/vd0004-than-1.jpg?v=1599101434000" alt="">
-                            <p><a href="" class="xem-nhanh">Xem nhanh</a></p>
                             <a href="">Vest dài VD0004 - Tếch chun</a>
                             <p>780.000đ</p>
                             <div class="color-circle">
@@ -175,6 +173,50 @@
                                 <div class="circle-white"></div>
                                 <div class="circle-yellow"></div>
                                 <div class="circle-cream"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="image">
+                        <div class="image-item">
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/286/031/products/vn0003-cv0040-1-e7d464f4-a41e-43bb-801b-7bddc4bc1c50.jpg?v=1601971009000" alt="">
+                            <a href="">Vest ngắn VN003</a>
+                            <p>780.000đ</p>
+                            <div class="color-circle">
+                                <div class="circle-black"></div>
+                                <div class="circle-white"></div>
+                                <div class="circle-yellow"></div>
+                                <div class="circle-gray"></div>
+                            </div>
+                        </div>
+                        <div class="image-item">
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/286/031/products/v821-2.jpg?v=1602668469000" alt="">
+                            <a href="">Áo vest VN0044</a>
+                            <p>780.000đ</p>
+                            <div class="color-circle">
+                                <div class="circle-black"></div>
+                                <div class="circle-charcoal-purple"></div>
+                                <div class="circle-white"></div>
+                            </div>
+                        </div>
+                        <div class="image-item">
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/286/031/products/v906td-2-f53e4570-f19a-4c1c-af6f-5083db5c4661.jpg?v=1590200545000" alt="">
+                            <a href="">Áo vest V906</a>
+                            <p>660.000đ</p>
+                            <div class="color-circle">
+                                <div class="circle-red"></div>
+                                <div class="circle-black"></div>
+                                <div class="circle-white"></div>
+                                <div class="circle-firebrick"></div>
+                            </div>
+                        </div>
+                        <div class="image-item">
+                            <img src="https://bizweb.dktcdn.net/thumb/large/100/286/031/products/v924-12.jpg?v=1602668499000" alt="">
+                            <a href="">Áo vest V924</a>
+                            <p>820.000đ</p>
+                            <div class="color-circle">
+                                <div class="circle-black"></div>
+                                <div class="circle-white"></div>
                             </div>
                         </div>
                     </div>
@@ -314,6 +356,26 @@
                     index--;
                 }
             }
+
+            const images = document.querySelectorAll(".san-pham-moi img");
+            images.forEach(item => item.addEventListener("click", handleZoomImage));
+            function handleZoomImage(event){
+                console.log(event.target);
+                const image = event.target.getAttribute("src");
+                const template = `<div class="lightbox">
+                        <div class="lightbox-content">
+                            <img src="${image}" alt="" class="lightbox-image">
+                        </div>
+                    </div>`;
+                document.body.insertAdjacentHTML("beforeend", template);
+            }
+
+            document.body.addEventListener("click", function(event){
+                if (event.target.matches(".lightbox")){
+                    event.target.parentNode.removeChild(event.target);
+                }
+            })
         </script>
+
     </body>
 </html>

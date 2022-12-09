@@ -3,7 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.container{
+    /* width: 100%;
+    padding: 0 5rem; */
+}
 .header{
     width: 100%;
     padding: 0 5rem;
@@ -177,7 +180,7 @@
 
 
 .body-header{
-    max-width: 1000px;
+    max-width: 100%;
     margin: 25px auto;
     position: relative;
     display: block;
@@ -204,7 +207,10 @@
     max-width: 100%;
 }
 .slider-prev{
-    left: -25px;
+    left: 0;
+}
+.slider-next{
+    right: 0;
 }
 .slider-next, .slider-prev{
     position: absolute;
@@ -262,7 +268,32 @@
 }
 .danh-muc-noi-bat .image .image-item>img{
     width: 100%;
+    cursor: zoom-in;
 }
+
+.lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* z-index: 999999; */
+    background-color: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.lightbox-content{
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.lightbox-content img{
+    max-height: 400px;
+    width: 100%;
+    object-fit: cover;
+}
+
+
 .image .image-item a{
     text-decoration: none;
     cursor: pointer;
@@ -354,7 +385,7 @@
 .circle-yellow{
     width: 30px;
     height: 30px;
-    background-color: yellow;
+    background-color: rgb(233, 233, 27);
     border: 1px solid rgb(161, 160, 160);
     margin-right: 10px;
 }
@@ -365,7 +396,20 @@
     border: 1px solid rgb(161, 160, 160);
     margin-right: 10px;
 }
-
+.circle-gray{
+    width: 30px;
+    height: 30px;
+    background-color: rgb(117, 112, 112);
+    border: 1px solid rgb(161, 160, 160);
+    margin-right: 10px;
+}
+.circle-firebrick{
+    width: 30px;
+    height: 30px;
+    background-color: firebrick;
+    border: 1px solid rgb(121, 118, 118);
+    margin-right: 10px;
+}
 
 .QC2{
     padding: 40px 6rem;
@@ -397,7 +441,6 @@
 .promotional-news-item  img{
     margin-left: 33px;
 }
-
 
 .bottom{
     background-color: rgb(34, 32, 32);
