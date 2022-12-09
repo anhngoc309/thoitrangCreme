@@ -176,228 +176,56 @@
 }
 
 
-.body-header{
-    max-width: 1000px;
-    margin: 25px auto;
-    position: relative;
-    display: block;
-} 
-.body-header .slider-main{
+.body{
     width: 100%;
-    height: 450px;
-    overflow: hidden;
-    position: relative;
     display: flex;
 }
-.body-header .slider-main .slider-item {
-    height: 100%;
-    width: 100%;
-    flex: 1 0 100%;
+.body-left{
+    width: 30%;
+    margin-right: 20px;
 }
-.body-header .slider-main .slider-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-.slider-main img{
-    display: block;
-    max-width: 100%;
-}
-.slider-prev{
-    left: -25px;
-}
-.slider-next, .slider-prev{
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #999;
-    background-color: white;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 10;
-}
-.slider-dots{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    list-style: none;
-    z-index: 10;
+.body-right{
+    width: 70%;
+    margin-right: 20px;
 }
 
-.body-header-item{
-    text-align: center;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
+.danh-muc-bai-viet{
+    border: 1px solid gray;
+}
+.danh-muc-bai-viet ul{
+    padding: 10px 40px;
+}
+.danh-muc-bai-viet ul li{
     padding: 10px;
-    height: 120px;
-    background-color: rgb(213, 211, 211);
+    font-size: 20px;
 }
-.body-header-item a{
+.danh-muc-bai-viet a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
-}
-
-.danh-muc-noi-bat{
-    margin-top: 30px;
-    text-align: center;
-}
-.danh-muc-noi-bat .image{
-    display: flex;
-    margin: 0 5rem;
-}
-.danh-muc-noi-bat .image .image-item{
-    padding: 20px;
-    width: 25%;
-}
-.danh-muc-noi-bat .image .image-item>img{
-    width: 100%;
-}
-.image .image-item a{
-    text-decoration: none;
-    cursor: pointer;
-    color: black;
-}
-.QC img{
-    padding: 15px 6rem;
-    width: 100%;
-}
-
-
-.san-pham-moi{
-    width: 100%;
-    margin-top: 30px;
-    text-align: center;
-}
-.san-pham-moi .image{
-    display: flex;
-    margin: 0 5rem;
-}
-.san-pham-moi .image img{
-    cursor: pointer;   
-}
-.san-pham-moi .image .image-item{
-    padding: 20px;
-    width: 25%;
-}
-.san-pham-moi .image .image-item>img{
-    width: 100%;
-}
-.san-pham-moi .image .image-item a:hover{
+}.danh-muc-bai-viet a:hover{
     color: red;
 }
-/* .san-pham-moi .xem-nhanh{
-    position: absolute;
-    display: none;
-}
-.san-pham-moi img:hover + .xem-nhanh{
-    display: block;
-} */
-.color-circle{
+
+.bai-viet-lien-quan .item{
     display: flex;
-    padding: 2rem;
-    align-items: center;
-    justify-content: center;
+    margin-bottom: 25px;
 }
-.circle-black{
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-white{
-    width: 30px;
-    height: 30px;
-    background-color: white;
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-charcoal-purple{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(34, 8, 58);
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-red{
-    width: 30px;
-    height: 30px;
-    background-color: red;
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-pink{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(228, 31, 162);
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-lead-blue{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(17, 8, 58);
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-yellow{
-    width: 30px;
-    height: 30px;
-    background-color: yellow;
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-.circle-cream{
-    width: 30px;
-    height: 30px;
-    background-color: rgb(240, 230, 230);
-    border: 1px solid rgb(161, 160, 160);
-    margin-right: 10px;
-}
-
-
-.QC2{
-    padding: 40px 6rem;
-}
-.QC2 img{
-    width: 555px;
-    height: 255px;
-}
-
-.promotional-news{
-    
-}
-.promotional-news .item{
-    display: flex;
-    margin: 20px 4rem;
-}   
-.promotional-news-item .text{
-    margin-left: 33px;
-    width: 360px;
-}
-.promotional-news-item .text a{
+.bai-viet-lien-quan .item a{
+    padding: 5px 10px;
     text-decoration: none;
     color: black;
+    cursor: pointer;
 }
-.promotional-news-item .text p{
-    color: gray;
-    padding: 5px 0;
-}
-.promotional-news-item  img{
-    margin-left: 33px;
+.bai-viet-lien-quan .item a:hover{
+    color: red;
 }
 
+.body-right .content p{
+    padding: 10px 0;
+}
+.body-right h3 a:hover{
+    color: red;
+}
 
 .bottom{
     background-color: rgb(34, 32, 32);

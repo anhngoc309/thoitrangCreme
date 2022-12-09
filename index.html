@@ -39,7 +39,7 @@
                             <a href="" class="home-page">TRANG CHỦ</a>
                         </div>
                         <div class="product-item">
-                            <a href="" class="product">SẢN PHẨM
+                            <a href="./shoping/index.html" class="product">SẢN PHẨM
                             </a>
                             <ul class="product-child">
                                 <li><a href="./shoping/index.html">BỘ QUẦN ÁO</a></li>
@@ -77,11 +77,15 @@
                         <li class="slider-dot-item"></li>
                     </ul>
                     <div class="slider-main">
-                        <div class="slider-item"><img src="http://lury.vn/uploads/dam-cong-so.jpg" alt=""></div>
-                        <div class="slider-item"><img src="https://img6.thuthuatphanmem.vn/uploads/2022/03/04/background-quang-cao-thoi-trang-dep_025656293.jpg" alt=""></div>
+                        <div class="slider-item">
+                            <img src="http://lury.vn/uploads/dam-cong-so.jpg" alt="">
+                        </div>
+                        <div class="slider-item">
+                            <img src="https://img6.thuthuatphanmem.vn/uploads/2022/03/04/background-quang-cao-thoi-trang-dep_025656293.jpg" alt="">
+                        </div>
                     </div>
-                    <button class="slider-prev"><</button>
-                    <button class="slider-next">></button>
+                    <button class="slider-prev">prev</button>
+                    <button class="slider-next">next</button>
                 </div>
                 <div class="body-header-item">
                     <div class="cong-so">
@@ -99,7 +103,7 @@
                 </div>
 
                 <div class="danh-muc-noi-bat">
-                    <h2><a href="">DANH MỤC NỔI BẬT</a></h2>
+                    <h2><a href="" style="text-decoration: none; color: black">DANH MỤC NỔI BẬT</a></h2>
                     <i>Những danh mục sản phẩm hot nhất hè này</i>
                     <div class="image">
                         <div class="image-item">
@@ -126,7 +130,7 @@
                 </div>
 
                 <div class="san-pham-moi">
-                    <h2><a href="">SẢN PHẨM MỚI</a></h2>
+                    <h2><a href="" style="text-decoration: none; color: black">SẢN PHẨM MỚI</a></h2>
                     <i>Sản phẩm nổi bật hôm nay</i>
                     <div class="image">
                         <div class="image-item">
@@ -177,7 +181,7 @@
                 </div>
 
 
-                <div style="text-align:center;"><button style="padding: 10px 20px; background-color: rgb(245, 89, 41); color: white; cursor: pointer;">Xem tất cả</button></div>
+                <div style="text-align:center;"><button style="padding: 10px 20px; background-color: rgb(245, 89, 41); color: white; cursor: pointer;"><a href="./shoping/index.html" style="color: black; text-decoration: none;">Xem tất cả</a></button></div>
 
 
                 <div class="QC2" style="display: flex">
@@ -187,7 +191,7 @@
 
                 <div class="promotional-news">
                     <div class="item-text" style="text-align: center">
-                        <h2><a href="">TIN TỨC KHUYẾN MÃI</a></h2>
+                        <h2><a href="" style="text-decoration: none; color: black">TIN TỨC KHUYẾN MÃI</a></h2>
                         <i>Tin tức thời trang mới nhất</i>
                     </div>
                     <div class="item">
@@ -197,7 +201,7 @@
                                 <a href=""><h4>LÀM SAO ĐỂ CHỌN ĐỒ PHÙ HỢP VỚI BẢN THÂN?</h4></a>
                                 <p>Oct 17, 20 by <u>CREME Thời trang công sở</u></p>
                                 <p>Các chị em vẫn luôn băn khoăn làm sao để ra được cách chọn đồ phù hợp với bản thân</p>
-                                <button style="padding: 10px 20px;">Xem thêm</button>
+                                <button style="padding: 10px 20px;"><a href="./see-more/seemore.html" style="text-decoration: none; color: black">Xem thêm</a></button>
                             </div>
                         </div>
     
@@ -276,8 +280,8 @@
 
         <script>
             const slider = document.querySelector(".body-header");
-            const sliderMain = document.querySelector(".slider-main");
-            const sliderItems = document.querySelectorAll(".slider-item");
+            const sliderMain = document.querySelector(".slider-main .slider-item");
+            const sliderItems = document.querySelectorAll(".slider-item img");
             const nextBtn = document.querySelector(".slider-next");
             const prevBtn = document.querySelector(".slider-prev");
             const dotItem = document.querySelectorAll(".slider-dot-item");
@@ -293,19 +297,19 @@
             });
             function handleChangeSlide(direction){
                 if (direction == 1){
-                    // console.log(sliderItemWidth)
-                    console.log(index)
-                    if (index >= slidesLength) return;
-                    postionX = postionX + sliderItemWidth;
+                    if (index >= slidesLength - 1){
+                        index = slidesLength - 1;
+                    }
+                    postionX = postionX - sliderItemWidth;
                     sliderMain.style = `transform: translateX(${postionX}px)`;
                     index++;
                 }
                 else if (direction == -1){
-                    console.log(index)
-
-                    // console.log(sliderItemWidth)
-                    if (index < 1) return;
-                    postionX = postionX - sliderItemWidth;
+                    if (index <= 0){
+                        index = 0;
+                        return;
+                    }
+                    postionX = postionX + sliderItemWidth;
                     sliderMain.style = `transform: translateX(${postionX}px)`;
                     index--;
                 }
